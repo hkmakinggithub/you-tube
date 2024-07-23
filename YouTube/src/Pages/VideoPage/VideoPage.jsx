@@ -172,14 +172,14 @@ const VideoPage = () => {
       <div className="container_VideoPage" onClick={handleGesture}>
         <div className="container_VideoPage_2">
           <div className="videoPage_screen">
-            <video
+            <iframe
               src={`https://www.youtube.com/embed/${videoDetails?.id?.videoId}?autoplay=1&mute=1`}
               title={videoDetails?.snippet?.title}
 
               ref={iframeRef}
               className="Video_Show_VideoPage"
               controls
-            ></video>
+            ></iframe>
 
             {popup.show && <div className="popup">{popup.message}</div>}
             <div className="video_detail_VideoPage">
